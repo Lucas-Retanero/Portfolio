@@ -1,0 +1,292 @@
+html {
+    color: #EEEEEE;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(150deg, #000, #04116a, #0a9348, #06e776);
+    background-size: 120% 120%;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #EEEEEE;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #04116a;
+    border-radius: 10px;
+    height: 2rem;
+}
+
+.cabecalho {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.cabecalho .logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    border: 2px solid #EEEEEE;
+    text-decoration: underline;
+    text-align: center;
+    line-height: 55px;
+    font-family: "Raleway", sans-serif;
+    transition: 0.5s;
+}
+
+.cabecalho a:hover .logo {
+    color: #06e776;
+    border: 2px solid #06e776;
+}
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 50px;
+    font-weight: 500;
+    border: solid #fff 2px;
+}
+
+.cabecalho .menu li a:hover {
+    background-color: #06e776;
+    color: #04116a;
+    transition: 0.3s;
+    font-weight: 500;
+    border: solid #06e776 2px;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh - 125px);
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p {
+    font-family: "Raleway";
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i {
+    border: 1px solid #EEEEEE;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 27px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover {
+    color: #06e776;
+    border: 1px solid #06e776;
+    transform: scale(1.1);
+}
+
+/* Comando para comentar no CSS é só precionar (control ;) */
+
+.home .container-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra-interna {
+    background: linear-gradient(to right, #04116a, #041bac, #0a9348, #06e776);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+
+}
+
+.projetos {
+    padding: 70px 0 70px;
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 240px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo {
+    display: block;
+}
+
+.projetos .projeto img {
+    height: 100%;
+}
+
+.projetos .projeto h3 {
+    background-color: #040203;
+    width: 100%;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto {
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+    opacity: 0.8;
+    background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos {
+    background: none;
+    border: 1px solid #EEEEEE;
+    border-radius: 15px;
+    color: #EEEEEE;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5rem;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #04116a;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+    display: none;
+}
+
+.projetos .btn-fechar-projetos {
+    background: none;
+    border: 1px solid #EEEEEE;
+    border-radius: 15px;
+    color: #EEEEEE;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+    margin-top: 5rem;
+}
+
+.projetos .btn-fechar-projetos:hover {
+    background-color: #04116a;
+    transition: 0.3s;
+}
+
+.projetos .btn-fechar-projetos.ativo {
+    display: block;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.topo {
+    background-color: #04116a;
+    position: fixed;
+    bottom: 20px;
+    right: -500px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.4s all;
+}
+
+.topo img {
+    width: 45px;
+}
+
+.mostrar-botao .topo {
+    right: 20px;
+    transition: 0.4s all;
+}
